@@ -12,8 +12,9 @@ public class ExampleA320871 {
       }
       myReader.close();
     } catch (FileNotFoundException e) {
-      System.out.println("An error occurred.");
       e.printStackTrace();
+      System.out.println("Couldn't find file.");
     }
+    System.out.println("Program till running");
   }
 }
