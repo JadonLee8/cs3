@@ -4,17 +4,18 @@ import java.util.Scanner;
 
 public class ExampleA320871 {
   public static void main(String[] args) {
+	  Scanner myReader = null;
     try {
-      Scanner myReader = new Scanner(new File("exampleA.txt"));
-      while (myReader.hasNextLine()) {
-        String data = myReader.nextLine();
-        System.out.println(data);
-      }
-      myReader.close();
+      myReader = new Scanner(new File("exampleA.txt"));
     } catch (FileNotFoundException e) {
       e.printStackTrace();
       System.out.println("Couldn't find file.");
     }
-    System.out.println("Program till running");
+    int n = myReader.nextInt();
+    myReader.nextLine();
+    for (int i = 0; i < n; i++) {
+    	System.out.println(myReader.nextLine());
+    }
+    myReader.close();
   }
 }
