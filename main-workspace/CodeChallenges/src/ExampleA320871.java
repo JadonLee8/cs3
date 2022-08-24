@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class ExampleA320871 {
   public static void main(String[] args) {
     try {
-      File myObj = new File("exampleA.txt");
-      Scanner myReader = new Scanner(myObj);
+      Scanner myReader = new Scanner(new File("exampleA.txt"));
       while (myReader.hasNextLine()) {
         String data = myReader.nextLine();
         System.out.println(data);
